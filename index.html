@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--^^----fonts---- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!--^^----bootstrap---- -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--^^----stylesheet---- -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container pt-5">
+        <h1 class="text-center mb-5 header position-relative">Bookmarker</h1>
+        <hr>
+        <h2 class="mt-5 text-center">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <label for="sitesName" class="form-label fw-bolder">
+            <i class="fa-solid fa-book-bookmark"></i>
+            Site Name</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control is-invalid" id="sitesName" aria-describedby="basic-addon3" placeholder="Bookmark Name">
+        </div>
+        <p id="errorName" class="alert alert-danger p-1 d-none">site name must be 3 to 8 character</p>
+
+        <label for="siteURL" class="form-label fw-bolder">
+            <i class="fa-solid fa-link"></i>
+            Site URL</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control is-invalid" id="siteURL" aria-describedby="basic-addon3" placeholder="Website URL">
+        </div>
+        <p id="errorURL" class="alert alert-danger p-1 d-none">site URL must be correct</p>
+
+        <button type="button" onclick="adding()" id="submitBtn" class="btn btn-danger pt-2 pb-2 ps-5 pe-5 d-block m-auto mt-5 fs-6 mb-5 disabled">Submit</button>
+        <hr>
+
+        <table class="table table-light">
+            <thead>
+              <tr>
+                <th class="pt-3 pb-3" scope="col">Index</th>
+                <th class="pt-3 pb-3" scope="col">Website Name</th>
+                <th class="pt-3 pb-3" scope="col">Visit</th>
+                <th class="pt-3 pb-3" scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableRow">
+            </tbody>
+          </table>
+    </div>
+    <!--^^----js file---- -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

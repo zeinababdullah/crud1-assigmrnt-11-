@@ -1,0 +1,46 @@
+body{
+    background-color: #F7ECDE;
+}
+hr {
+    border: none;
+    border-top: 2px dotted black;
+    color: black;
+    background-color: white;
+    height: 1px;
+    width: 100%;
+    opacity: 1;
+  }
+
+.container .header{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+}
+.header::before{
+    content: "";
+    width: 20%;
+    height: 30%;
+    bottom: 0%;
+    transform: translateX(0%);
+    position: absolute;
+    background-color: #FEC260;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.header:hover::before{
+    height: 70%;
+}
+
+h2{
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #fec262;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgb(254, 194, 98, .25);
+}
